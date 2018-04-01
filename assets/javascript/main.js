@@ -6,9 +6,8 @@ var sky = Math.floor(Math.random() * 12 + 1);
 
 var targetScore = Math.floor(Math.random() * (120 - 19 + 1) + 19);
 var currentScore = "";
-var wins = 0;
-var losses = 0;
-console.log(wins, losses);
+var wins = 1;
+var losses = 1;
 
 $(document).ready(function () {
 
@@ -28,68 +27,67 @@ $(document).ready(function () {
     // store values in jewels on click and display
     $("#red").click(function () {
         currentScore = parseInt(currentScore + red);
-        $(".current-score").text("Current Score: " + currentScore);
-        $(".jewel-score").text("Jewel Score: " + red);
+        $(".current-score").text("Total: " + currentScore);
+        $(".jewel-score").text("Jewel Value: " + red);
         if (currentScore === targetScore) {
-            wins++;
+            $("#wins").text("Wins: " + wins++);
             reset();
         }
 
         if (currentScore > targetScore) {
-            losses++;
+            $("#losses").text("Losses: " + losses++);
             reset();
         }
     });
 
     $("#blue").click(function () {
         currentScore = parseInt(currentScore + blue);
-        $(".current-score").text("Current Score: " + currentScore);
-        $(".jewel-score").text("Jewel Score: " + blue);
+        $(".current-score").text("Total: " + currentScore);
+        $(".jewel-score").text("Jewel Value: " + blue);
         if (currentScore === targetScore) {
-            wins++;
+            $("#wins").text("Wins: " + wins++);
             reset();
         }
 
         if (currentScore > targetScore) {
-            losses++;
+            $("#losses").text("Losses: " + losses++);
             reset();
         }
     });
 
     $("#sky").click(function () {
         currentScore = parseInt(currentScore + sky);
-        $(".current-score").text("Current Score: " + currentScore);
-        $(".jewel-score").text("Jewel Score: " + sky);
+        $(".current-score").text("Total: " + currentScore);
+        $(".jewel-score").text("Jewel Value: " + sky);
         if (currentScore === targetScore) {
-            wins++;
+            $("#wins").text("Wins: " + wins++);
             reset();
         }
 
         if (currentScore > targetScore) {
-            losses++;
+            $("#losses").text("Losses: " + losses++);
             reset();
         }
     });
 
     $("#orange").click(function () {
         currentScore = parseInt(currentScore + orange);
-        $(".current-score").text("Current Score: " + currentScore);
-        $(".jewel-score").text("Jewel Score: " + orange);
+        $(".current-score").text("Total: " + currentScore);
+        $(".jewel-score").text("Jewel Value: " + orange);
         if (currentScore === targetScore) {
-            wins++;
+            $("#wins").text("Wins: " + wins++);
             reset();
         }
 
         if (currentScore > targetScore) {
-            losses++;
+            $("#losses").text("Losses: " + losses++);
             reset();
         }
 
     });
 
 });
-    // update scoreboard
 
 
 
-    // reset game
+
